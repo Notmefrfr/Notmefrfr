@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASPHALT 9: REJENDS - HOME</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            background-image: url(nissan-gtr-r35-thumb.jpg); /* Path to your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px; /* Adjust if needed */
+        }
+
+        .game-title {
+            font-family: 'Racing Sans One', sans-serif;
+            font-size: 150px;
+            background: linear-gradient(to bottom, #ffffff, #808080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .game-subtitle {
+            font-size: 64px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #ffffff, #808080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #00ccff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .game-description {
+            max-width: 600px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            color: #e6e6e6;
+        }
+
+        .overview-section {
+            background-color: #1a1a1a;
+            padding: 40px 20px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        .overview-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ff0066;
+        }
+
+        .overview-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #e6e6e6;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff0066;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 30px #ff0066, 0 0 40px #ff0066;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff3399;
+            box-shadow: 0 0 20px #ff3399, 0 0 30px #ff3399, 0 0 40px #ff3399, 0 0 50px #ff3399;
+        }
+
+        @media screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .game-title {
+                font-size: 48px;
+            }
+
+            .game-subtitle {
+                font-size: 24px;
+            }
+
+            .game-description {
+                max-width: 90%;
+            }
+
+            .overview-title {
+                font-size: 24px;
+            }
+
+            .overview-content {
+                max-width: 90%;
+            }
+
+            .btn {
+                padding: 10px;
+            }
+        }
+
+        /* Subscription Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .popup-content h2 {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .popup-content input,
+        .popup-content select {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .popup-content input::placeholder {
+            color: #ccc;
+        }
+
+        .popup-content button {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background-color: #111111;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .popup-content button:hover {
+            background-color: #111111;
+        }
+
+        .close-btn {
+            background-color: #333;
+        }
+
+        .popup-content .checkbox-label {
+            display: flex;
+            align-items: baseline;
+            justify-content: start;
+            margin-bottom: 10px;
+        }
+
+        .popup-content .checkbox-label input {
+            margin-right: 10px;
+        }
+
+        .popup-content .checkbox-label span {
+            color: #fff;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease; /* Added transition properties */
+        }
+
+        header nav ul li a:hover {
+            color: #ff0066; /* Added hover color change */
+            transform: scale(1.1); /* Added hover scale transformation */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="esports.html">Esport Event</a></li>
+                <li><a href="#" id="open-popup">Subscription</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="game-title">ASPHALT 9</div>
+        <div class="game-subtitle">REJENDS</div>
+        <div class="game-description">
+            Asphalt 9: Rejends is an arcade racing game developed and published by Gameloft. It features an extensive roster of real hypercars from top manufacturers and offers thrilling races across stunning locations.
+        </div>
+        <a href="#overview" class="btn">Learn More</a>
+    </section>
+
+    <section id="overview" class="overview-section">
+        <div class="overview-title">Game Overview</div>
+        <div class="overview-content">
+            <p>Asphalt 9: Rejends is a racing video game developed by Gameloft Barcelona and published by Gameloft. Released on February 26, 2020, for various platforms including iOS, Android, Windows, and Nintendo Switch, it is the ninth main installment in the Asphalt series. It features a roster of real hypercars from renowned manufacturers such as Ferrari, Porsche, Lamborghini, and W Motors.</p>
+            <p>The game features a career mode with over 60 seasons and 800 races. It also has an online multiplayer mode, Club Races, limited-time events, and a new "Asphalt eSports Series" tournament mode introduced in the 2020 Fall Update. Asphalt 9: Rejends received generally positive reviews from critics, praising the graphics, gameplay, and controls.</p>
+            <p>Players compete against each other in various race types, including Time-Limited Events, Multiplayer Races, and Limited-Time Cups. The game also features "TouchDrive," a control scheme that allows players to swipe the screen to steer their vehicle.</p>
+        </div>
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Subscription</h2>
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="date" id="dob" placeholder="Date of Birth">
+            <select id="gender">
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="checkbox-label">
+                <input type="checkbox" id="terms">
+                <span><u>terms and policy</u></span>
+            </div>
+            <button id="subscribe">Subscribe</button>
+            <button class="close-btn" id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gamefolt and RJStudio</p>
+    </footer>
+
+    <script>
+        document.getElementById('open-popup').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        document.getElementById('close-popup').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        document.getElementById('subscribe').addEventListener('click', function () {
+            const termsCheckbox = document.getElementById('terms');
+            if (!termsCheckbox.checked) {
+                alert('Please agree to the terms and policy.');
+                return;
+            }
+            // Here you can add form validation and submission logic
+            alert('Subscription successful!');
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

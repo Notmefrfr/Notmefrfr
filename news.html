@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASPHALT 9: NEWS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        header nav ul li {
+            margin: 0 5px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+
+        header nav ul li a:hover {
+            background-color: #333;
+        }
+
+        .no-box {
+            border: none;
+            padding: 0 20px;
+            font-family: 'Racing Sans One', sans-serif;
+            font-size: 24px;
+            background: linear-gradient(to bottom, #ffffff, #b8b8b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 20px; /* Added top padding to account for fixed header */
+        }
+
+        .news-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .news-image {
+            flex: 0 0 150px;
+            margin-right: 20px;
+        }
+
+        .news-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .news-content {
+            flex: 1;
+        }
+
+        .news-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .news-details {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .news-read-time {
+            margin-left: 10px;
+            color: #ffcc00;
+        }
+
+        @media screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .news-image {
+                margin-right: 0;
+                margin-bottom: 10px;
+                flex: 0 0 auto;
+            }
+
+            .news-title {
+                font-size: 20px;
+            }
+
+            .news-details {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Added ASPHALT 9: LEGENDS on the left side of the navigation bar -->
+                <li class="no-box">Asphalt 9: Legends</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="esports.html">Esports</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="news-item">
+            <div class="news-image">
+                <img src="news1.jpg" alt="News Image">
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">New Cars Added in the Latest Update</h2>
+                <p class="news-details">Published: May 25, 2024 <span class="news-read-time">· 3 min read</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo tortor. Morbi vitae odio luctus, convallis enim eu, cursus elit.</p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-image">
+                <img src="news2.jpg" alt="News Image">
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Upcoming Game in Gameloft</h2>
+                <p class="news-details">Published: May 20, 2024 <span class="news-read-time">· 2 min read</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo tortor. Morbi vitae odio luctus, convallis enim eu, cursus elit.</p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-image">
+                <img src="news3.jpg" alt="News Image">
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Games Promo Only This Week!</h2>
+                <p class="news-details">Published: May 25, 2024 <span class="news-read-time">· 3 min read</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo tortor. Morbi vitae odio luctus, convallis enim eu, cursus elit.</p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-image">
+                <img src="news4.jpg" alt="News Image">
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Upcoming Games in Gameloft</h2>
+                <p class="news-details">Published: May 20, 2024 <span class="news-read-time">· 2 min read</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo tortor. Morbi vitae odio luctus, convallis enim eu, cursus elit.</p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-image">
+                <img src="news5.jpg" alt="News Image">
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Upcoming Tournament - Wednesday, May 15, 2024</h2>
+                <p class="news-details">Published: May 25, 2024 <span class="news-read-time">· 3 min read</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo tortor. Morbi vitae odio luctus, convallis enim eu, cursus elit.</p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-image">
+                <img src="news6.jpg" alt="News Image">
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Upcoming Games in 2024</h2>
+                <p class="news-details">Published: May 20, 2024 <span class="news-read-time">· 2 min read</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo tortor. Morbi vitae odio luctus, convallis enim eu, cursus elit.</p>
+            </div>
+        </div>
+
+        <!-- Add more news items as needed -->
+    </div>
+</body>
+</html>
